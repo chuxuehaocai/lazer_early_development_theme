@@ -1,0 +1,16 @@
+# 本地截图与验证素材，不进仓库
+/shots/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 打包中间产物（zip 在 build/ 里会随仓库一起走，这里只挡临时文件）
+*.tmp
+*.log
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

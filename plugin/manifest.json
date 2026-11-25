@@ -1,0 +1,15 @@
+{
+  "id": "chuxuehaocai.lazer.theme.earlydev",
+  "name": "Early Development",
+  "version": "1.0.0",
+  "description": "把 Lazer 早期 parchment 设计阶段（Ivory / Clay / Stone）的排版、圆角、行高与歌词动效翻译成宿主声明式主题令牌的纯配色皮肤。",
+  "author": "chuxuehaocai",
+  "entry": "main.lua",
+  "apiVersion": 1,
+  "provider": "parchment",
+  "capabilities": [],
+  "auth": [],
+  "permissions": {
+    "storage": true
+  }
+}
