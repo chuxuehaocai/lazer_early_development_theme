@@ -49,29 +49,33 @@ Lazer 最早那版界面（`3fdf89b4`）是羊皮纸配色：卡片切得方方�
 ## 目录
 
 ```
-plugin/              打进 ZIP 的全部内容
+plugin/              打进 ZIP 的全部内容（ZIP 根 = 这个目录）
   manifest.json      id / 版本 / 权限（只要 storage）
   main.lua           describe、theme、skin、session 四个入口
   lib/tokens.lua     令牌、调色板、摘要
   lib/config.lua     cornerPx / cornerScale
   LICENSE            MIT，跟仓库根是同一份
-tools/               校验和打包，纯 Python
-  verify.py          manifest → package → lua → zip 四段一次跑完
-docs/                当初照着参考实现记的像素笔记
 build/               打出来的 zip
 ```
+
+仓库里只有这四样东西：插件本体、许可、打包好的 zip 和这份说明。没有构建脚本、
+没有本地服务、没有需要装的东西 —— 插件是纯 Lua，客户端直接读。
 
 `cornerPx` 是唯一还留着的可调项：客户端「设置 → 外观 → 圆角设置」选「跟随主题设置」时
 读它。写 0 是直角，写 16 大概就是宿主原本那个圆角。值存在宿主的插件存储里，默认 0。
 
-## 自己跑一遍
+## 重新打包
+
+改完 `plugin/` 之后自己压一份即可，注意 **zip 的根就是 `plugin/` 的内容**
+（`manifest.json` 必须在根，外面不能再套一层 `plugin/` 目录）：
 
 ```powershell
-python tools\verify.py
+cd plugin
+Compress-Archive -Path manifest.json, main.lua, lib, LICENSE `
+                 -DestinationPath ..\build\chuxuehaocai.lazer.theme.earlydev-1.0.0.zip -Force
 ```
 
-四段都 PASS 才会在 `build/` 出 zip，末尾顺手打文件数、解压后体积、压缩体积和 sha256。
-只想查一段也行，比如 `python tools\check_lua.py`。
+客户端只认 `manifest.json` / `*.lua` / 文本资源 / 根目录的 `LICENSE`，包里别塞别的。
 
 ## 许可
 

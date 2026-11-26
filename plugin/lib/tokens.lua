@@ -100,7 +100,14 @@ local ELEMENTS = {
   -- 版面标题：HeroHeading 实测 56 / 40 / 32（角色是 heading，字号被覆盖）
   pageTitleCompactSize = 40,
   pageTitleRegularSize = 56,
+  -- 大标题半粗（display 角色本身是 400，这里单独给），副标题离标题 12 px
+  pageTitleWeight = 600,
+  pageTitleSubtitleGap = 12,
   sectionHeaderSize = 12, -- InlineLabel：12px 大写 + 1.6 字距
+
+  -- 播放条左侧歌手行：10 px 中粗（原来的 11/600 偏粗压过曲名）。曲名与译文照旧。
+  playerBarArtistSize = 10,
+  playerBarArtistWeight = 500,
 
   displayWeight = 400,  -- display 68 w400（serif 角色）
   headingWeight = 700,  -- heading w700

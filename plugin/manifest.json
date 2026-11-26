@@ -6,10 +6,8 @@
   "author": "chuxuehaocai",
   "entry": "main.lua",
   "apiVersion": 1,
-  "provider": "parchment",
-  "capabilities": [],
-  "auth": [],
   "permissions": {
     "storage": true
-  }
+  },
+  "type": "theme"
 }
