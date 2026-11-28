@@ -19,6 +19,7 @@ local ELEMENTS = {
   cornerScale = 1,
   listTileMinHeight = 64,
   listTileVerticalPadding = 10,
+  trackHoverDurationMs = 240, -- 歌曲行悬浮遮罩，放慢过渡避免鼠标移动时闪烁
   controlRadius = 12,
   glassBlurSigma = 0,
 

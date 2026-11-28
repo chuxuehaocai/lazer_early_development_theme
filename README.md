@@ -33,6 +33,7 @@ Lazer 最早那版界面（`3fdf89b4`）是羊皮纸配色：卡片切得方方�
 | --- | --- | --- |
 | `groupedCardRadius` | 0 | 卡片直角 |
 | `listTileMinHeight` / `listTileVerticalPadding` | 64 / 10 | 参考实现里量出来的行高 |
+| `trackHoverDurationMs` | 240 | 歌曲行悬浮遮罩的过渡时长，避免鼠标移动时闪烁 |
 | `railWidth` | 232 | 侧栏固定宽 |
 | `playerBarHeight` / `compactPlayerBarHeight` | 100 / 72 | 桌面与紧凑播放条 |
 | `glassBlurSigma` | 0 | 不模糊 |
